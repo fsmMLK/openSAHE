@@ -10,29 +10,56 @@ The atlas was constructed based on 3D magnetic resonance images (MRI) of 107 hum
 
 ## Citing the atlas
 
-Please cite this atlas using the following bib entry and also mentioning the link to this github repository
+Please cite this article
 
 ```
-@misc{openANAT-2021,
-title={openANAT - open source anatomical atlas of the human head for electrophysiology applications}, 
-url={https://github.com/fsmMLK/electrophysiologyAnatomicalAtlas}, 
-DOI={XXXXXXXXXXXXXX}, 
-author={Moura, F. and Beraldo R. and Ferreira L. and Siltanen, S.}, 
-year={2021}, 
-month={Oct}}
+[PLACEHOLDER]
+```
+
+If you use the source code, please also cite
+
+Moura, Fernando S, Beraldo, Roberto G, Ferreira, Leonardo A, & Siltanen, Samuli. (2021). openSAHE: Open Source Statistical Anatomical Atlas of the Human head for Electrophysiology Applications (source code) (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.5567086
+
+```
+@software{moura_fernando_s_2021_5567086,
+  author       = {Moura, Fernando S and Beraldo, Roberto G and Ferreira, Leonardo A and Siltanen, Samuli},
+  title        = {{openSAHE: Open Source Statistical Anatomical Atlas of the Human head for Electrophysiology Applications (source code)}},
+  month        = oct,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.5567086},
+  url          = {https://doi.org/10.5281/zenodo.5567086}
+}
+```
+
+If you use the precomputed atlases, please also cite
+
+Moura, Fernando S, Beraldo, Roberto G, Ferreira, Leonardo A, & Siltanen, Samuli. (2021). openSAHE: Open Source Statistical Anatomical Atlas of the Human head for Electrophysiology Applications (precomputed atlases) (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.5559624
+
+```
+@dataset{moura_fernando_s_2021_5559624,
+  author       = {Moura, Fernando S and Beraldo, Roberto G and Ferreira, Leonardo A and Siltanen, Samuli},
+  title        = {{openSAHE: Open Source Statistical Anatomical Atlas  of the Human head for Electrophysiology Applications (precomputed atlases)}},
+  month        = oct,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {1.0},
+  doi          = {10.5281/zenodo.5559624},
+  url          = {https://doi.org/10.5281/zenodo.5559624}
+}
 ```
 
 
-## Precomputed atlases
+## Precomputed atlases used in the publication
 
-Precomputed atlases used in the publication (see below) can be found at 
+Precomputed atlases used in the publication (see above) can be found at 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5559624.svg)](https://doi.org/10.5281/zenodo.5559624)
 
-Source code version used for the publication (see below) can be found at
+Source code version used for the publication (see above) can be found at
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5559624.svg)](https://doi.org/10.5281/zenodo.5559624)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5567086.svg)](https://doi.org/10.5281/zenodo.5567086)
 
 ## Installation
 
