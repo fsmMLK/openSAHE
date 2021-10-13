@@ -1,0 +1,317 @@
+project name: circleWillis
+results folder: ./resultsTemp/  # Use relative paths, relative to the directory where .yml is. Do not forget the last !!!
+
+solver:
+  Ccfl: 0.3 # Courant number
+  cycles: 1000 # maximum number of cycles
+  jump: 100 # timesteps per cycle to be saved
+  convergence tolerance: 5.0 # percentage value
+  #gamma_profile: 9
+  #initial_pressure: 0
+  #inlet_BC_switch: 3
+
+blood:
+  mu:  4.5e-3 # dynamic viscosity [Pa s]
+  rho: 1050.0 # density [kg/m^3]
+
+network:
+  - label: ascendingaorta_01
+    sn: 1 # proximal (source) node
+    tn: 2 # distal (target) node
+    L: 4.0e-2 # length (m)
+    R0: 12e-3 # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+    inlet: Q
+    inlet number: 1
+    inlet file: heart_inlet.dat
+
+  - label: AorticarchI_02
+    sn: 2
+    tn: 3
+    L: 0.02 # length (m)
+    R0: 11.2e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+
+  - label: Brachiocephalic_03
+    sn: 2
+    tn: 4
+    L: 0.034 # length (m)
+    R0: 6.2e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+
+  - label: AorticarchII_04
+    sn: 3
+    tn: 5
+    L: 0.039 # length (m)
+    R0: 10.7e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+
+  - label: Lcommoncarotid_05
+    sn: 3
+    tn: 6
+    L: 0.208 # length (m)
+    R0: 2.5e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+
+  - label: Rcommoncarotid_06
+    sn: 4
+    tn: 7
+    L: 0.177 # length (m)
+    R0: 2.5e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+
+  - label: Rsubclavian_07
+    sn: 4
+    tn: 8
+    L: 0.034 # length (m)
+    R0: 4.23e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+
+  - label: Thoracicaorta_08
+    sn: 5
+    tn: 9
+    L: 0.156 # length (m)
+    R0: 9.99e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 1.8e8
+    Cc: 3.87e-9
+
+  - label: Lsubclavian_09
+    sn: 5
+    tn: 10
+    L: 0.034 # length (m)
+    R0: 4.23e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+
+  - label: Lextcarotid_10
+    sn: 6
+    tn: 11
+    L: 0.177 # length (m)
+    R0: 1.5e-3   # proximal lumen radius (m)
+    E: 800.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 5.43e9
+    Cc: 1.27e-10
+
+  - label: LintcarotidI_11
+    sn: 6
+    tn: 12
+    L: 0.177 # length (m)
+    R0: 2e-3   # proximal lumen radius (m)
+    E: 800.0e3 # Young's modulus (Pa)
+
+  - label: RintcarotidI_12
+    sn: 7
+    tn: 13
+    L: 0.177 # length (m)
+    R0: 2e-3   # proximal lumen radius (m)
+    E: 800.0e3 # Young's modulus (Pa)
+
+  - label: Rextcarotid_13
+    sn: 7
+    tn: 14
+    L: 0.177 # length (m)
+    R0: 1.5e-3   # proximal lumen radius (m)
+    E: 800.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 5.43e9
+    Cc: 1.27e-10
+
+  - label: Rvertebral_14
+    sn: 8
+    tn: 15
+    L: 0.148 # length (m)
+    R0: 1.36e-3   # proximal lumen radius (m)
+    E: 800.0e3 # Young's modulus (Pa)
+
+  - label: Rbrachial_15
+    sn: 8
+    tn: 16
+    L: 0.422 # length (m)
+    R0: 4.03e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 2.68e9
+    Cc: 2.58e-10
+
+  - label: Lbrachial_16
+    sn: 10
+    tn: 17
+    L: 0.422 # length (m)
+    R0: 4.03e-3   # proximal lumen radius (m)
+    E: 400.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 2.68e9
+    Cc: 2.58e-10
+
+  - label: Lvertebral_17
+    sn: 10
+    tn: 15
+    L: 0.148 # length (m)
+    R0: 1.36e-3   # proximal lumen radius (m)
+    E: 800.0e3 # Young's modulus (Pa)
+
+  - label: LintcarotidII_18
+    sn: 12
+    tn: 18
+    L: 0.005 # length (m)
+    R0: 2e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Lpcoa_19
+    sn: 19
+    tn: 12
+    L: 0.015 # length (m)
+    R0: 7.3e-4   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Rpcoa_20
+    sn: 20
+    tn: 13
+    L: 0.015 # length (m)
+    R0: 7.3e-4   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: RintcarotidII_21
+    sn: 13
+    tn: 21
+    L: 0.005 # length (m)
+    R0: 2e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Basilar_22
+    sn: 15
+    tn: 31
+    L: 0.025 # length (m)
+    R0: 1.62e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Lmca_23
+    sn: 18
+    tn: 23
+    L: 0.119 # length (m)
+    R0: 1.43e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 5.97e9
+    Cc: 1.16e-10
+
+  - label: Rmca_24
+    sn: 21
+    tn: 24
+    L: 0.119 # length (m)
+    R0: 1.43e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 5.97e9
+    Cc: 1.16e-10
+
+  - label: Lacaa1_25
+    sn: 18
+    tn: 25
+    L: 0.012 # length (m)
+    R0: 1.17e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Racaa1_26
+    sn: 21
+    tn: 26
+    L: 0.012 # length (m)
+    R0: 1.17e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Lpcap1_27
+    sn: 22
+    tn: 19
+    L: 0.005 # length (m)
+    R0: 1.07e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Rpcap1_28
+    sn: 22
+    tn: 20
+    L: 0.005 # length (m)
+    R0: 1.07e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Lacaa2_29
+    sn: 25
+    tn: 27
+    L: 0.103 # length (m)
+    R0: 1.2e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 8.48e9
+    Cc: 8.20e-11
+
+  - label: Racaa2_30
+    sn: 26
+    tn: 28
+    L: 0.103 # length (m)
+    R0: 1.2e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 8.48e9
+    Cc: 8.20e-11
+
+  - label: Acoa_31
+    sn: 25
+    tn: 26
+    L: 0.003 # length (m)
+    R0: 7.4e-4   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Lpcap2_32
+    sn: 19
+    tn: 29
+    L: 0.086 # length (m)
+    R0: 1.05e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 1.108e10
+    Cc: 6.20e-11
+
+  - label: Rpcap2_33
+    sn: 20
+    tn: 30
+    L: 0.086 # length (m)
+    R0: 1.05e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 1.108e10
+    Cc: 6.20e-11
+
+  - label: BasilarII_34
+    sn: 31
+    tn: 33
+    L: 0.001 # length (m)
+    R0: 1.62e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: BasilarIII_35
+    sn: 33
+    tn: 22
+    L: 0.003 # length (m)
+    R0: 1.62e-3   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+
+  - label: Lsca_36
+    sn: 33
+    tn: 34
+    L: 0.086 # same as Lpcap2. length (m)
+    R0: 6.5e-4   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 2.5e10  # same as Rpcap2.
+    Cc: 6.20e-11 # same as Lpcap2.
+
+  - label: Rsca_37
+    sn: 31
+    tn: 32
+    L: 0.086 # same as Rpcap2. length (m)
+    R0: 6.5e-4   # proximal lumen radius (m)
+    E: 1600.0e3 # Young's modulus (Pa)
+    outlet: wk2
+    R1: 2.5e10  # same as Rpcap2.
+    Cc: 6.20e-11  # same as Rpcap2.

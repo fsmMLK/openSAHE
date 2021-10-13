@@ -1,0 +1,29 @@
+This is the input image folder.
+
+------------------
+SUBJECT IMAGES
+------------------
+
+You must add MRA images from CASILab*, following the name convention
+Normal###-MRA.nii
+
+where ### is an increasing number
+
+* CASILab at The University of North Carolina at Chapel Hill and distributed by the MIDAS Data Server at Kitware, Inc.
+https://www.insight-journal.org/midas/community/view/21 
+
+
+------------------
+REFERENCE IMAGE
+------------------
+
+The reference image file was obtained from http://nist.mni.mcgill.ca/?p=858.
+
+
+
+References:
+
+Bullitt E, Zeng D, Gerig G, Aylward S, Joshi S, Smith JK, Lin W, Ewend MG (2005) Vessel tortuosity and brain tumor malignancy: A blinded study. Academic Radiology 12:1232-1240
+as an example of how this kind of healthy image database can be used,
+
+G. Grabner, A. L. Janke, M. M. Budge, D. Smith, J. Pruessner, and D. L. Collins, “Symmetric atlasing and model based segmentation: an application to the hippocampus in older adults”, Med Image Comput Comput Assist Interv Int Conf Med Image Comput Comput Assist Interv, vol. 9, pp. 58–66, 2006. http://dx.doi.org/10.1007/11866763_8
