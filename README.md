@@ -10,11 +10,27 @@ The atlas was constructed based on 3D magnetic resonance images (MRI) of 107 hum
 
 ## Citing the atlas
 
-Please cite this article
+Please cite this article in your work
+
+Moura, Fernando S, Beraldo, Roberto G, Ferreira, Leonardo A, & Siltanen, Samuli. (2021). Anatomical atlas of the upper part of the human head for electroencephalography and bioimpedance applications. Physiological Measurement, 42(10). 105015. https://doi.org/10.1088/1361-6579/ac3218
+
 
 ```
-[PLACEHOLDER]
+@article{Moura_2021,
+	author = {Fernando S Moura and Roberto G Beraldo and Leonardo A Ferreira and Samuli Siltanen},
+	title = {Anatomical atlas of the upper part of the human head for electroencephalography and bioimpedance applications},
+	journal = {Physiological Measurement},
+	doi = {10.1088/1361-6579/ac3218},
+	url = {https://doi.org/10.1088/1361-6579/ac3218},
+	year = 2021,
+	month = {oct},
+	publisher = {{IOP} Publishing},
+	volume = {42},
+	number = {10},
+	pages = {105015}
+}
 ```
+
 
 If you use the source code, please also cite
 
