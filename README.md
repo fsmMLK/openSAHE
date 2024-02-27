@@ -438,8 +438,7 @@ One example of usage is provided in the `forwardProblem` folder. It can be calle
 python3 EITmodel.py -i path/to/configurationFile.conf
 ```
 
-where some configuration files are provided in the `./anatomicalAtlas/forwardProblem/inputFiles` directory. In this same directory there is a zip 
-file with the FEM meshes that must be uncompressed.
+where some configuration files are provided in the `./forwardProblem/inputFiles` directory. In this same directory there is a zip file with the FEM meshes that must be uncompressed.
 
 The configuration file specifies the solver. Description of the fields are presented in the file.
 

@@ -209,7 +209,7 @@ class AnatomicalAtlasCore:
             yValues = np.arange(minBboxMesh[1], maxBboxMesh[1], self.voxelSize_mm[1])
             zValues = np.arange(minBboxMesh[2], maxBboxMesh[2], self.voxelSize_mm[2])
 
-            img = np.zeros((len(xValues), len(yValues), len(zValues)), dtype=np.bool)
+            img = np.zeros((len(xValues), len(yValues), len(zValues)), dtype=bool)
 
             for elem in self.femMesh.getElementsByMeshTag(self.alignmentMeshTag):
                 if elem.isRegion:

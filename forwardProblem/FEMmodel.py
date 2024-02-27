@@ -633,8 +633,8 @@ class FemModel():
         for data in dataList:
             size += len(data[0])
 
-        rows = np.empty(size, dtype=np.int)
-        cols = np.empty(size, dtype=np.int)
+        rows = np.empty(size, dtype=int)
+        cols = np.empty(size, dtype=int)
         vals = np.empty(size)
 
         pos = 0
