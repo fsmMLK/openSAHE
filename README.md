@@ -117,10 +117,7 @@ conda config --add channels intel
 
 4. Create a new python environment for the atlas
   ~~~
-  conda create -n atlasIntelPython_3 intelpython3_core
-  conda activate atlasIntelPython_3
-  conda install pyqt pyyaml matplotlib nipype nibabel meshio lxml pycairo psutil nptyping tornado simpleitk 
-  scikit-image pandas jill
+  conda create -n atlasIntelPython_3 pyqt pyyaml matplotlib nipype nibabel meshio lxml pycairo psutil nptyping tornado simpleitk scikit-image pandas jill
   ~~~
 
 5. (optional but recommended =) ) Avoid activating conda's (base) in all terminals. Open (or create) a 
