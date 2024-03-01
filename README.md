@@ -115,10 +115,6 @@ sudo bash Miniconda3-latest-Linux-x86_64.sh
 conda config --add channels intel
 ~~~
 
-4. Create a new python environment for the atlas
-  ~~~
-  conda create -n atlasIntelPython_3 pyqt pyyaml matplotlib nipype nibabel meshio lxml pycairo psutil nptyping tornado simpleitk scikit-image pandas jill
-  ~~~
 
 5. (optional but recommended =) ) Avoid activating conda's (base) in all terminals. Open (or create) a 
    file ~/.condarc and paste the following:
@@ -131,7 +127,14 @@ channels:        <-- channels to be considered priority channels are on top.
 auto_activate_base: false   <-- disable (base) auto load
 ~~~
 
-6. If matplotlib shows the following error:
+6. Create a new python environment for the atlas
+
+~~~
+conda create -n atlasIntelPython_3 pyqt pyyaml matplotlib nipype nibabel meshio lxml pycairo psutil nptyping tornado simpleitk scikit-image pandas jill
+~~~
+
+
+7. If matplotlib shows the following error:
 
 ~~~
 Bad key "text.kerning_factor" on line 4 in /home/samyak/anaconda3/lib/python3.7/site-packages/matplotlib/mpl-data/stylelib/_classic_test_patch.mplstyle. You probably need to get an updated matplotlibrc file from https://github.com/matplotlib/matplotlib/blob/v3.1.3/matplotlibrc.template or from the matplotlib source distribution
