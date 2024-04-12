@@ -101,7 +101,7 @@ def getNow():
 def showModulesVersion():
     print("\n")
     print("======== machine name =========")
-    print("Machine: %s" % os.uname()[1])
+    print("Machine: %s" % os.name)
     print("Using %d cores of a total of %d..." % (nCores, os.cpu_count()))
     print("======== modules Version =========")
     print('Numpy version: ' + np.version.version)
